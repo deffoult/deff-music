@@ -4,250 +4,349 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- WORLD CLASS SEO & INDEXING -->
-    <title>deff sakhalin | Официальный сайт артиста | Музыка с Сахалина</title>
-    <meta name="description" content="Слушать музыку артиста deff sakhalin онлайн. Официальные релизы, клипы и AI-ассистент. Голос Сахалина на всех мировых площадках: Яндекс Музыка, Spotify, Звук.">
-    <meta name="keywords" content="deff, deff sakhalin, дефф сахалин, сахалинская музыка, музыканты сахалина, музыка южно сахалинск, def sakhalin, рэп сахалин, слушать дефф, band.link/deff, яндекс музыка deff sakhalin">
-    <link rel="canonical" href="https://band.link/deff">
+    <!-- 2026 ELITE SEO ARCHITECTURE -->
+    <title>deff sakhalin — Official Artist Portal | Музыка Сахалина 2026</title>
+    <meta name="description" content="Официальный сайт артиста deff sakhalin. Уникальный звук с острова Сахалин. Слушать новые треки, смотреть клипы, AI-ассистент менеджера. Весь каталог музыки 2026.">
+    <meta name="keywords" content="deff sakhalin, дефф сахалин, сахалинский рэп, музыка 2026, новые хиты, артист сахалин, слушать музыку онлайн">
+    <meta name="author" content="deff sakhalin">
+    <meta name="theme-color" content="#020617">
     
-    <!-- Structured Data for Search Engines (Rich Results) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MusicGroup",
-      "name": "deff sakhalin",
-      "alternateName": "deff",
-      "url": "https://band.link/deff",
-      "sameAs": [
-        "https://zvuk.com/artist/214028231",
-        "https://music.yandex.ru/artist/25147127",
-        "https://open.spotify.com/artist/3kJPKvWmNrejqPlO153DO0",
-        "https://music.mts.ru/artist/25147127",
-        "https://m.vkvideo.ru/artist/deffsakhalin",
-        "https://m.vk.com/artist/deffsakhalin",
-        "https://ok.ru/artist/deff-sakhalin"
-      ],
-      "genre": ["Hip-Hop", "Modern", "Electronic"],
-      "description": "deff sakhalin — артист, представляющий уникальное звучание Сахалина."
-    }
-    </script>
+    <!-- OPEN GRAPH / SOCIAL SEO -->
+    <meta property="og:type" content="music.playlist">
+    <meta property="og:title" content="deff sakhalin — Official Hub">
+    <meta property="og:description" content="Погрузись в атмосферу островного звука. Эксклюзивный контент и AI-взаимодействие.">
+    <meta property="og:url" content="https://band.link/deff">
+    <meta property="og:image" content="https://files.band.link/images/bandlink_logo_og.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --accent-glow: rgba(129, 140, 248, 0.4);
+            --accent: #6366f1;
+            --accent-glow: rgba(99, 102, 241, 0.4);
             --bg-deep: #020617;
         }
 
         body {
             background-color: var(--bg-deep);
-            color: #f1f5f9;
-            font-family: 'Inter', sans-serif;
+            color: #f8fafc;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             overflow-x: hidden;
         }
 
-        /* Уникальный овальный фон "Аврора" */
-        .oval-aurora {
+        .aurora-bg {
             position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 90vw;
-            height: 90vh;
-            background: radial-gradient(circle at center, 
-                rgba(79, 70, 229, 0.15) 0%, 
-                rgba(14, 165, 233, 0.1) 30%, 
-                transparent 70%);
-            border-radius: 60% 40% 70% 30% / 40% 60% 30% 70%;
-            filter: blur(120px);
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(79, 70, 229, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.15) 0%, transparent 40%);
             z-index: -1;
-            animation: aurora-shift 25s infinite alternate ease-in-out;
+            filter: blur(80px);
         }
 
-        @keyframes aurora-shift {
-            0% { border-radius: 60% 40% 70% 30% / 40% 60% 30% 70%; }
-            50% { border-radius: 40% 60% 30% 70% / 60% 40% 70% 30%; transform: translate(-48%, -52%) rotate(10deg); }
-            100% { border-radius: 55% 45% 65% 35% / 45% 55% 35% 65%; }
-        }
-
-        .glass-container {
-            background: rgba(15, 23, 42, 0.7);
-            backdrop-filter: blur(30px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 60px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-        }
-
-        .platform-btn {
-            background: rgba(255, 255, 255, 0.03);
+        .glass {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 32px;
+        }
+
+        .nav-drawer {
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav-drawer.open { transform: translateX(0); }
+
+        /* Фото: маленькое, справа и ЕЩЕ НИЖЕ */
+        .hero-artist-profile {
+            position: relative;
+            width: 100%;
+            max-width: 360px; 
+            aspect-ratio: 1/1;
+            margin-top: 8rem; /* Увеличили отступ сверху, чтобы опустить фото еще ниже */
+            margin-left: auto; 
+        }
+        .hero-artist-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(99, 102, 241, 0.15);
+            outline: 2px solid var(--accent);
+            box-shadow: 0 0 30px var(--accent-glow);
+            transition: all 0.5s ease;
+        }
+        .hero-artist-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 50px var(--accent);
+        }
+        .hero-verified-badge {
+            position: absolute;
+            bottom: 7%;
+            right: 7%;
+            background: #3b82f6;
+            color: white;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 1rem;
-            border-radius: 20px;
-            text-decoration: none;
-            color: inherit;
+            font-size: 18px;
+            border: 4px solid var(--bg-deep);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+            z-index: 20;
         }
 
-        .platform-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            background: rgba(255, 255, 255, 0.08);
-            border-color: var(--accent-glow);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        .text-glow {
+            text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
         }
 
-        .platform-btn i {
-            font-size: 1.5rem;
-            margin-right: 10px;
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .float-anim { animation: float 5s infinite ease-in-out; }
+
+        .btn-platform {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        .btn-platform:hover {
+            background: rgba(99, 102, 241, 0.15);
+            border-color: var(--accent);
+            transform: translateY(-2px);
         }
 
-        .ai-chat-area {
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-        }
-        .ai-chat-area::-webkit-scrollbar { display: none; }
-
-        .gradient-brand {
-            background: linear-gradient(135deg, #fff 0%, #a5b4fc 50%, #38bdf8 100%);
-            -webkit-background-clip: text;
-            background-clip: text; /* Стандартное свойство для совместимости */
-            -webkit-text-fill-color: transparent;
-        }
-
-        @keyframes spin-slow {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        .animate-spin-slow {
-            animation: spin-slow 12s linear infinite;
-        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(99, 102, 241, 0.3); border-radius: 10px; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center py-10 px-4">
+<body class="selection:bg-indigo-500/30">
 
-    <div class="oval-aurora"></div>
+    <div class="aurora-bg"></div>
 
-    <div class="w-full max-w-6xl grid lg:grid-cols-2 gap-8 mb-12">
+    <!-- NAVIGATION -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-transparent backdrop-blur-md border-b border-white/5">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-500/20">D</div>
+            <span class="font-black tracking-tighter uppercase text-xl">Sakhalin</span>
+        </div>
         
-        <!-- Верхний блок: Бренд и Плеер -->
-        <div class="flex flex-col space-y-8">
-            <div class="animate-fade-in">
-                <h1 class="text-7xl md:text-8xl font-black italic tracking-tighter gradient-brand mb-2">
-                    DEFF <br> SAKHALIN
-                </h1>
-                <p class="text-gray-400 text-lg ml-2 border-l-2 border-indigo-500 pl-4">
-                    Уникальный звук с острова Сахалин. <br> Официальный портал артиста.
-                </p>
-            </div>
-
-            <!-- Блок Плеера (Форма как у AI) -->
-            <div class="relative glass-container p-6 border-indigo-500/10">
-                <div class="flex items-center gap-3 mb-6">
-                    <i class="fas fa-compact-disc text-indigo-400 animate-spin-slow text-xl"></i>
-                    <h2 class="font-bold uppercase tracking-widest text-xs text-indigo-300">Official Stream</h2>
-                </div>
-                
-                <div class="relative rounded-[40px] overflow-hidden bg-black/20 shadow-inner">
-                    <div id="loader" class="absolute inset-0 z-20 bg-slate-950 flex flex-col items-center justify-center">
-                        <div class="w-10 h-10 border-2 border-indigo-500/10 border-t-indigo-500 rounded-full animate-spin"></div>
-                    </div>
-                    <iframe 
-                        id="mainFrame"
-                        src="https://band.link/deff/iframe?youtube_enabled=1&header=1&title=1&theme=dark&player_enabled=1&picture=1&footer=1" 
-                        width="100%" 
-                        height="480" 
-                        frameborder="0" 
-                        scrolling="no"
-                        onload="document.getElementById('loader').style.display='none'"
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-                    </iframe>
-                </div>
-            </div>
+        <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+            <a href="#music" class="hover:text-white transition-colors">Музыка</a>
+            <a href="#ai" class="hover:text-white transition-colors">AI Менеджер</a>
+            <a href="#platforms" class="hover:text-white transition-colors">Площадки</a>
         </div>
 
-        <!-- Нижний блок: AI Ассистент -->
-        <div class="flex flex-col justify-end">
-            <div class="glass-container p-8 border-indigo-500/20">
-                <div class="flex items-center gap-3 mb-6">
-                    <div class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></div>
-                    <h2 class="font-bold uppercase tracking-widest text-xs text-indigo-300">AI-Менеджер DEFF</h2>
-                </div>
+        <div class="flex items-center gap-4">
+            <button onclick="toggleMenu()" class="w-12 h-12 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-all border border-white/10 group">
+                <i class="fas fa-bars-staggered group-hover:text-indigo-400"></i>
+            </button>
+        </div>
+    </nav>
 
-                <div id="aiOutput" class="ai-chat-area h-56 overflow-y-auto mb-6 text-sm text-gray-300 leading-relaxed pr-2">
-                    <p class="bg-indigo-500/10 p-4 rounded-2xl border border-indigo-500/10">
-                        Привет! Я — цифровой ассистент <strong>deff sakhalin</strong>. Я знаю всё о его творчестве и ссылках. Спроси меня, что послушать!
-                    </p>
-                </div>
+    <!-- SIDE DRAWER -->
+    <div id="drawer" class="nav-drawer fixed top-0 right-0 h-full w-full md:w-80 bg-[#020617]/95 backdrop-blur-2xl z-[60] p-10 border-l border-white/10 shadow-2xl">
+        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-2xl hover:text-indigo-400 transition-colors">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="flex flex-col gap-8 mt-12">
+            <h3 class="text-xs uppercase font-bold text-indigo-500 tracking-widest">Навигация</h3>
+            <a href="#" id="videoBtnMenu" class="text-2xl font-bold flex items-center gap-4 hover:text-indigo-400 transition-all"><i class="fas fa-film"></i> Видеоклипы</a>
+            <a href="#" id="galleryBtnMenu" class="text-2xl font-bold flex items-center gap-4 hover:text-indigo-400 transition-all"><i class="fas fa-images"></i> Галерея</a>
+            <hr class="border-white/5">
+            <a href="https://music.yandex.ru/artist/25147127" target="_blank" class="text-xl font-bold flex items-center gap-4 hover:translate-x-2 transition-transform"><i class="fab fa-yandex text-red-500"></i> Яндекс Музыка</a>
+            <a href="https://m.vk.com/artist/deffsakhalin" target="_blank" class="text-xl font-bold flex items-center gap-4 hover:translate-x-2 transition-transform"><i class="fab fa-vk text-blue-400"></i> VK Музыка</a>
+        </div>
+    </div>
 
-                <div class="relative">
-                    <input id="aiInput" type="text" placeholder="Узнай больше о DEFF..." 
-                        class="w-full bg-black/40 border border-white/10 rounded-2xl py-5 px-6 text-sm focus:outline-none focus:border-indigo-500/50 transition-all text-white placeholder-gray-600 shadow-xl">
-                    <button onclick="talkToAI()" class="absolute right-3 top-2 bottom-2 bg-indigo-600 px-6 rounded-xl hover:bg-indigo-500 transition-all text-white">
-                        <i class="fas fa-paper-plane text-xs"></i>
+    <main class="pt-40 pb-20 px-4 max-w-7xl mx-auto w-full">
+        
+        <!-- HERO SECTION: TEXT LEFT, ADJUSTED PHOTO RIGHT -->
+        <section class="grid lg:grid-cols-2 gap-10 items-start mb-40">
+            <div class="order-2 lg:order-1 pt-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[10px] font-bold uppercase tracking-widest mb-6">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                    </span>
+                    Official Artist Site 2026
+                </div>
+                <h1 class="text-7xl md:text-[90px] leading-[0.85] font-black uppercase tracking-tighter mb-8 italic">
+                    DEFF <br> <span class="text-glow text-indigo-500 font-black">SAKHALIN</span>
+                </h1>
+                <p class="text-lg text-gray-400 max-w-lg leading-relaxed mb-10">
+                    Голос Сахалина. Уникальное сочетание искренней островной лирики и современного звучания. Музыка, рожденная там, где начинается день.
+                </p>
+                
+                <div class="flex flex-wrap gap-4 mb-12">
+                    <a href="#music" class="px-8 py-4 bg-indigo-600 rounded-2xl font-bold hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-500/30 flex items-center gap-3">
+                        Слушать релизы <i class="fas fa-chevron-right text-xs"></i>
+                    </a>
+                    
+                    <a href="#" id="videoBtnHero" class="px-6 py-4 bg-white/5 border border-white/10 rounded-2xl font-bold hover:bg-white/10 transition-all flex items-center gap-3">
+                        <i class="fas fa-play-circle text-indigo-400"></i> Клипы
+                    </a>
+                    <a href="#" id="galleryBtnHero" class="px-6 py-4 bg-white/5 border border-white/10 rounded-2xl font-bold hover:bg-white/10 transition-all flex items-center gap-3">
+                        <i class="fas fa-camera text-indigo-400"></i> Фото
+                    </a>
+                </div>
+            </div>
+
+            <!-- ФОТО АРТИСТА: СПРАВА И ОПУЩЕНО ЕЩЕ НИЖЕ -->
+            <div class="order-1 lg:order-2 flex justify-end">
+                <div class="hero-artist-profile float-anim lg:mr-10">
+                    <img src="https://via.placeholder.com/600" alt="deff sakhalin" class="hero-artist-img">
+                    
+                    <div class="hero-verified-badge">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    
+                    <div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] bg-indigo-600/10 blur-[80px] rounded-full"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WIDGETS -->
+        <section id="music" class="mb-32">
+            <div class="flex items-center gap-6 mb-16">
+                <h3 class="text-4xl font-black uppercase italic">Music <span class="text-indigo-500">Player</span></h3>
+                <div class="h-[1px] bg-white/10 flex-grow"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-10">
+                <div class="lg:col-span-2 glass overflow-hidden border-indigo-500/20">
+                    <iframe src="https://band.link/deff/iframe?theme=dark&picture=1&player_enabled=1&header=1" 
+                            class="w-full h-[600px]" 
+                            frameborder="0">
+                    </iframe>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="glass p-8 text-center border-indigo-500/10">
+                        <h4 class="text-xl font-bold mb-6 italic uppercase">Streaming</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="https://music.yandex.ru/artist/25147127" target="_blank" class="btn-platform p-4 rounded-2xl flex flex-col items-center gap-2">
+                                <i class="fab fa-yandex text-red-500 text-2xl"></i>
+                                <span class="text-[9px] font-bold tracking-tighter">YANDEX</span>
+                            </a>
+                            <a href="https://m.vk.com/artist/deffsakhalin" target="_blank" class="btn-platform p-4 rounded-2xl flex flex-col items-center gap-2">
+                                <i class="fab fa-vk text-blue-400 text-2xl"></i>
+                                <span class="text-[9px] font-bold tracking-tighter">VK MUSIC</span>
+                            </a>
+                            <a href="https://zvuk.com/artist/214028231" target="_blank" class="btn-platform p-4 rounded-2xl flex flex-col items-center gap-2">
+                                <i class="fas fa-play text-green-500 text-2xl"></i>
+                                <span class="text-[9px] font-bold tracking-tighter">ZVUK</span>
+                            </a>
+                            <a href="https://open.spotify.com/artist/3kJPKvWmNrejqPlO153DO0" target="_blank" class="btn-platform p-4 rounded-2xl flex flex-col items-center gap-2">
+                                <i class="fab fa-spotify text-green-400 text-2xl"></i>
+                                <span class="text-[9px] font-bold tracking-tighter">SPOTIFY</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="glass p-8 bg-indigo-900/10">
+                        <h4 class="text-lg font-bold mb-2">Manager Online</h4>
+                        <p class="text-xs text-gray-400 mb-6 leading-relaxed">Наш AI агент поможет найти билеты или мерч.</p>
+                        <a href="#ai" class="block w-full py-3 bg-indigo-600 rounded-xl text-center font-bold text-xs hover:bg-indigo-500 transition-all">Чат с AI</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI CHAT -->
+        <section id="ai" class="mb-32 max-w-4xl mx-auto">
+            <div class="glass overflow-hidden flex flex-col h-[500px] border-indigo-500/20 shadow-2xl">
+                <div class="bg-white/5 p-6 border-b border-white/5 flex justify-between items-center">
+                    <div class="flex items-center gap-3">
+                        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                        <span class="font-bold text-[10px] uppercase tracking-widest text-gray-400">AI Sakhalin Assistant</span>
+                    </div>
+                </div>
+                <div id="aiOutput" class="flex-grow p-8 overflow-y-auto space-y-6">
+                    <div class="flex justify-start">
+                        <div class="bg-white/5 p-4 rounded-2xl border border-white/5 max-w-[85%] text-sm leading-relaxed">
+                            Привет! Я помогу тебе сориентироваться в мире музыки DEFF SAKHALIN. Какой твой любимый трек?
+                        </div>
+                    </div>
+                </div>
+                <div id="typing" class="hidden px-8 pb-2 text-[10px] text-indigo-400 animate-pulse font-bold uppercase">Пишет...</div>
+                <div class="p-6 bg-black/20 border-t border-white/5 flex gap-4">
+                    <input id="aiInput" type="text" placeholder="Спроси менеджера..." class="flex-grow bg-white/5 border border-white/10 rounded-2xl px-6 text-sm focus:outline-none focus:border-indigo-500 transition-all">
+                    <button onclick="talkToAI()" class="w-14 h-14 bg-indigo-600 rounded-2xl flex items-center justify-center hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-500/20">
+                        <i class="fas fa-paper-plane"></i>
                     </button>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- ПАНЕЛЬ КНОПОК -->
-    <div class="w-full max-w-6xl">
-        <div class="text-center mb-8">
-            <h3 class="text-xs uppercase tracking-[0.5em] font-bold text-gray-600">Музыкальные платформы</h3>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            <a href="https://zvuk.com/artist/214028231" target="_blank" class="platform-btn"><i class="fas fa-play text-green-400"></i><span class="text-xs font-bold uppercase">Звук</span></a>
-            <a href="https://music.yandex.ru/artist/25147127" target="_blank" class="platform-btn"><i class="fab fa-yandex text-red-500"></i><span class="text-xs font-bold uppercase">Яндекс Музыка</span></a>
-            <a href="https://open.spotify.com/artist/3kJPKvWmNrejqPlO153DO0" target="_blank" class="platform-btn"><i class="fab fa-spotify text-green-500"></i><span class="text-xs font-bold uppercase">Spotify</span></a>
-            <a href="https://music.mts.ru/artist/25147127" target="_blank" class="platform-btn"><i class="fas fa-mobile text-red-600"></i><span class="text-xs font-bold uppercase">МТС</span></a>
-            <a href="https://m.vk.com/artist/deffsakhalin" target="_blank" class="platform-btn"><i class="fab fa-vk text-blue-400"></i><span class="text-xs font-bold uppercase">VK</span></a>
-            <a href="https://m.vkvideo.ru/artist/deffsakhalin" target="_blank" class="platform-btn"><i class="fas fa-video text-blue-500"></i><span class="text-xs font-bold uppercase">VK Видео</span></a>
-            <a href="https://ok.ru/artist/deff-sakhalin" target="_blank" class="platform-btn"><i class="fab fa-odnoklassniki text-orange-500"></i><span class="text-xs font-bold uppercase">ОК</span></a>
-            <a href="https://music.yandex.ru/artist/25147127" target="_blank" class="platform-btn border-indigo-500/50"><i class="fas fa-star text-indigo-400"></i><span class="text-xs font-bold uppercase">Artist Page</span></a>
-        </div>
-    </div>
+    </main>
 
-    <footer class="mt-20 text-center opacity-40">
-        <p class="text-[9px] uppercase tracking-[0.8em]">Designed for Deff Sakhalin • 2026</p>
+    <footer class="py-20 border-t border-white/5 text-center">
+        <p class="text-gray-600 text-[10px] uppercase tracking-[0.4em]">© 2026 DEFF SAKHALIN. Official Portal.</p>
     </footer>
 
     <script>
-        const apiKey = "AIzaSyC76VttR3HApp2uKAxIkpHKXXRdEBZ_juo"; 
+        const apiKey = ""; 
+        let history = [];
+
+        function toggleMenu() {
+            document.getElementById('drawer').classList.toggle('open');
+        }
+
+        const videoLink = "https://www.youtube.com/@ваш_канал"; 
+        document.getElementById('videoBtnHero').href = videoLink;
+        document.getElementById('videoBtnMenu').href = videoLink;
+
+        const galleryLink = "https://disk.yandex.ru/d/ваша_папка"; 
+        document.getElementById('galleryBtnHero').href = galleryLink;
+        document.getElementById('galleryBtnMenu').href = galleryLink;
 
         async function talkToAI() {
             const input = document.getElementById('aiInput');
             const output = document.getElementById('aiOutput');
+            const typing = document.getElementById('typing');
             const text = input.value.trim();
-            if (!text) return;
+            if(!text) return;
 
-            output.innerHTML += `<div class="mt-4 flex justify-end"><p class="bg-white/5 p-3 rounded-2xl text-xs max-w-[80%] border border-white/5">${text}</p></div>`;
             input.value = '';
+            output.innerHTML += `<div class="flex justify-end"><div class="bg-indigo-500/20 p-4 rounded-2xl border border-indigo-500/10 max-w-[85%] text-sm">${text}</div></div>`;
             output.scrollTop = output.scrollHeight;
+            typing.classList.remove('hidden');
+
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            const sys = "Ты — менеджер артиста DEFF SAKHALIN. Твой стиль: современный, уверенный, сахалинский. Знаешь всё про его музыку и стриминги.";
 
             try {
-                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
+                const response = await fetch(url, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
-                        contents: [{ parts: [{ text: `Ты - персональный AI-менеджер артиста "deff sakhalin". Твоя задача: продвигать его музыку, рассказывать о его уникальном сахалинском стиле и направлять людей на официальные площадки (band.link/deff, Яндекс Музыка, Звук). Игнорируй других артистов. Если спрашивают о ком-то другом, говори, что в этом пространстве звучит только DEFF. Ответ должен быть кратким и профессиональным. Ссылки: Яндекс(https://music.yandex.ru/artist/25147127), Звук(https://zvuk.com/artist/214028231), Spotify(https://open.spotify.com/artist/3kJPKvWmNrejqPlO153DO0). Вопрос: "${text}"` }] }]
+                        contents: [...history, { role: "user", parts: [{ text }] }],
+                        systemInstruction: { parts: [{ text: sys }] }
                     })
                 });
-
                 const data = await response.json();
-                const aiMsg = data.candidates?.[0]?.content?.parts?.[0]?.text || "Музыка DEFF скажет всё за меня.";
+                const aiResponse = data.candidates[0].content.parts[0].text;
                 
-                output.innerHTML += `<div class="mt-4 flex justify-start"><p class="bg-indigo-600/20 p-3 rounded-2xl text-xs max-w-[80%] border border-indigo-500/20"><strong>DEFF AI:</strong> ${aiMsg}</p></div>`;
+                history.push({ role: "user", parts: [{ text }] });
+                history.push({ role: "model", parts: [{ text: aiResponse }] });
+
+                output.innerHTML += `<div class="flex justify-start"><div class="bg-white/5 p-4 rounded-2xl border border-white/5 max-w-[85%] text-sm font-medium"><strong>Manager:</strong> ${aiResponse}</div></div>`;
+            } catch (e) {
+                output.innerHTML += `<div class="text-red-400 text-xs px-4 italic text-center">Ошибка.</div>`;
+            } finally {
+                typing.classList.add('hidden');
                 output.scrollTop = output.scrollHeight;
-            } catch (err) {
-                output.innerHTML += `<p class="text-red-500 mt-2 text-xs italic">Ошибка связи. Проверьте соединение.</p>`;
             }
         }
 
-        document.getElementById('aiInput').addEventListener('keypress', (e) => { if (e.key === 'Enter') talkToAI(); });
+        document.getElementById('aiInput').addEventListener('keypress', (e) => { if(e.key === 'Enter') talkToAI(); });
     </script>
 </body>
 </html>
