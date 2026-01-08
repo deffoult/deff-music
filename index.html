@@ -1,1 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- WORLD CLASS SEO & INDEXING -->
+    <title>deff sakhalin | Официальный сайт артиста | Музыка с Сахалина</title>
+    <meta name="description" content="Слушать музыку артиста deff sakhalin онлайн. Официальные релизы, клипы и AI-ассистент. Голос Сахалина на всех мировых площадках: Яндекс Музыка, Spotify, Звук.">
+    <meta name="keywords" content="deff, deff sakhalin, дефф сахалин, сахалинская музыка, рэп сахалин, слушать дефф, band.link/deff, яндекс музыка deff sakhalin">
+    <link rel="canonical" href="https://band.link/deff">
+    
+    <!-- Structured Data for Search Engines (Rich Results) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "deff sakhalin",
+      "alternateName": "deff",
+      "url": "https://band.link/deff",
+      "sameAs": [
+        "https://zvuk.com/artist/214028231",
+        "https://music.yandex.ru/artist/25147127",
+        "https://open.spotify.com/artist/3kJPKvWmNrejqPlO153DO0",
+        "https://music.mts.ru/artist/25147127",
+        "https://m.vkvideo.ru/artist/deffsakhalin",
+        "https://m.vk.com/artist/deffsakhalin",
+        "https://ok.ru/artist/deff-sakhalin"
+      ],
+      "genre": ["Hip-Hop", "Modern", "Electronic"],
+      "description": "deff sakhalin — артист, представляющий уникальное звучание Сахалина."
+    }
+    </script>
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --accent-glow: rgba(129, 140, 248, 0.4);
+            --bg-deep: #020617;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: #f1f5f9;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Уникальный овальный фон "Аврора" */
+        .oval-aurora {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90vw;
+            height: 90vh;
+            background: radial-gradient(circle at center, 
+                rgba(79, 70, 229, 0.15) 0%, 
+                rgba(14, 165, 233, 0.1) 30%, 
+                transparent 70%);
+            border-radius: 60% 40% 70% 30% / 40% 60% 30% 70%;
+            filter: blur(120px);
+            z-index: -1;
+            animation: aurora-shift 25s infinite alternate ease-in-out;
+        }
+
+        @keyframes aurora-shift {
+            0% { border-radius: 60% 40% 70% 30% / 40% 60% 30% 70%; }
+            50% { border-radius: 40% 60% 30% 70% / 60% 40% 70% 30%; transform: translate(-48%, -52%) rotate(10deg); }
+            100% { border-radius: 55% 45% 65% 35% / 45% 55% 35% 65%; }
+        }
+
+        .glass-container {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 60px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .platform-btn {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            border-radius: 20px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .platform-btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent-glow);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .platform-btn i {
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        .ai-chat-area {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .ai-chat-area::-webkit-scrollbar { display: none; }
+
+        .gradient-brand {
+            background: linear-gradient(135deg, #fff 0%, #a5b4fc 50%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            background-clip: text; /* Стандартное свойство для совместимости */
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 12s linear infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center py-10 px-4">
+
+    <div class="oval-aurora"></div>
+
+    <div class="w-full max-w-6xl grid lg:grid-cols-2 gap-8 mb-12">
+        
+        <!-- Верхний блок: Бренд и Плеер -->
+        <div class="flex flex-col space-y-8">
+            <div class="animate-fade-in">
+                <h1 class="text-7xl md:text-8xl font-black italic tracking-tighter gradient-brand mb-2">
+                    DEFF <br> SAKHALIN
+                </h1>
+                <p class="text-gray-400 text-lg ml-2 border-l-2 border-indigo-500 pl-4">
+                    Уникальный звук с острова Сахалин. <br> Официальный портал артиста.
+                </p>
+            </div>
+
+            <!-- Блок Плеера (Форма как у AI) -->
+            <div class="relative glass-container p-6 border-indigo-500/10">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fas fa-compact-disc text-indigo-400 animate-spin-slow text-xl"></i>
+                    <h2 class="font-bold uppercase tracking-widest text-xs text-indigo-300">Official Stream</h2>
+                </div>
+                
+                <div class="relative rounded-[40px] overflow-hidden bg-black/20 shadow-inner">
+                    <div id="loader" class="absolute inset-0 z-20 bg-slate-950 flex flex-col items-center justify-center">
+                        <div class="w-10 h-10 border-2 border-indigo-500/10 border-t-indigo-500 rounded-full animate-spin"></div>
+                    </div>
+                    <iframe 
+                        id="mainFrame"
+                        src="https://band.link/deff/iframe?youtube_enabled=1&header=1&title=1&theme=dark&player_enabled=1&picture=1&footer=1" 
+                        width="100%" 
+                        height="480" 
+                        frameborder="0" 
+                        scrolling="no"
+                        onload="document.getElementById('loader').style.display='none'"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Нижний блок: AI Ассистент -->
+        <div class="flex flex-col justify-end">
+            <div class="glass-container p-8 border-indigo-500/20">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></div>
+                    <h2 class="font-bold uppercase tracking-widest text-xs text-indigo-300">AI-Менеджер DEFF</h2>
+                </div>
+
+                <div id="aiOutput" class="ai-chat-area h-56 overflow-y-auto mb-6 text-sm text-gray-300 leading-relaxed pr-2">
+                    <p class="bg-indigo-500/10 p-4 rounded-2xl border border-indigo-500/10">
+                        Привет! Я — цифровой ассистент <strong>deff sakhalin</strong>. Я знаю всё о его творчестве и ссылках. Спроси меня, что послушать!
+                    </p>
+                </div>
+
+                <div class="relative">
+                    <input id="aiInput" type="text" placeholder="Узнай больше о DEFF..." 
+                        class="w-full bg-black/40 border border-white/10 rounded-2xl py-5 px-6 text-sm focus:outline-none focus:border-indigo-500/50 transition-all text-white placeholder-gray-600 shadow-xl">
+                    <button onclick="talkToAI()" class="absolute right-3 top-2 bottom-2 bg-indigo-600 px-6 rounded-xl hover:bg-indigo-500 transition-all text-white">
+                        <i class="fas fa-paper-plane text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ПАНЕЛЬ КНОПОК -->
+    <div class="w-full max-w-6xl">
+        <div class="text-center mb-8">
+            <h3 class="text-xs uppercase tracking-[0.5em] font-bold text-gray-600">Музыкальные платформы</h3>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            <a href="https://zvuk.com/artist/214028231" target="_blank" class="platform-btn"><i class="fas fa-play text-green-400"></i><span class="text-xs font-bold uppercase">Звук</span></a>
+            <a href="https://music.yandex.ru/artist/25147127" target="_blank" class="platform-btn"><i class="fab fa-yandex text-red-500"></i><span class="text-xs font-bold uppercase">Яндекс Музыка</span></a>
+            <a href="https://open.spotify.com/artist/3kJPKvWmNrejqPlO153DO0" target="_blank" class="platform-btn"><i class="fab fa-spotify text-green-500"></i><span class="text-xs font-bold uppercase">Spotify</span></a>
+            <a href="https://music.mts.ru/artist/25147127" target="_blank" class="platform-btn"><i class="fas fa-mobile text-red-600"></i><span class="text-xs font-bold uppercase">МТС</span></a>
+            <a href="https://m.vk.com/artist/deffsakhalin" target="_blank" class="platform-btn"><i class="fab fa-vk text-blue-400"></i><span class="text-xs font-bold uppercase">VK</span></a>
+            <a href="https://m.vkvideo.ru/artist/deffsakhalin" target="_blank" class="platform-btn"><i class="fas fa-video text-blue-500"></i><span class="text-xs font-bold uppercase">VK Видео</span></a>
+            <a href="https://ok.ru/artist/deff-sakhalin" target="_blank" class="platform-btn"><i class="fab fa-odnoklassniki text-orange-500"></i><span class="text-xs font-bold uppercase">ОК</span></a>
+            <a href="https://music.yandex.ru/artist/25147127" target="_blank" class="platform-btn border-indigo-500/50"><i class="fas fa-star text-indigo-400"></i><span class="text-xs font-bold uppercase">Artist Page</span></a>
+        </div>
+    </div>
+
+    <footer class="mt-20 text-center opacity-40">
+        <p class="text-[9px] uppercase tracking-[0.8em]">Designed for Deff Sakhalin • 2026</p>
+    </footer>
+
+    <script>
+        const apiKey = "AIzaSyC76VttR3HApp2uKAxIkpHKXXRdEBZ_juo"; 
+
+        async function talkToAI() {
+            const input = document.getElementById('aiInput');
+            const output = document.getElementById('aiOutput');
+            const text = input.value.trim();
+            if (!text) return;
+
+            output.innerHTML += `<div class="mt-4 flex justify-end"><p class="bg-white/5 p-3 rounded-2xl text-xs max-w-[80%] border border-white/5">${text}</p></div>`;
+            input.value = '';
+            output.scrollTop = output.scrollHeight;
+
+            try {
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: `Ты - персональный AI-менеджер артиста "deff sakhalin". Твоя задача: продвигать его музыку, рассказывать о его уникальном сахалинском стиле и направлять людей на официальные площадки (band.link/deff, Яндекс Музыка, Звук). Игнорируй других артистов. Если спрашивают о ком-то другом, говори, что в этом пространстве звучит только DEFF. Ответ должен быть кратким и профессиональным. Ссылки: Яндекс(https://music.yandex.ru/artist/25147127), Звук(https://zvuk.com/artist/214028231), Spotify(https://open.spotify.com/artist/3kJPKvWmNrejqPlO153DO0). Вопрос: "${text}"` }] }]
+                    })
+                });
+
+                const data = await response.json();
+                const aiMsg = data.candidates?.[0]?.content?.parts?.[0]?.text || "Музыка DEFF скажет всё за меня.";
+                
+                output.innerHTML += `<div class="mt-4 flex justify-start"><p class="bg-indigo-600/20 p-3 rounded-2xl text-xs max-w-[80%] border border-indigo-500/20"><strong>DEFF AI:</strong> ${aiMsg}</p></div>`;
+                output.scrollTop = output.scrollHeight;
+            } catch (err) {
+                output.innerHTML += `<p class="text-red-500 mt-2 text-xs italic">Ошибка связи. Проверьте соединение.</p>`;
+            }
+        }
+
+        document.getElementById('aiInput').addEventListener('keypress', (e) => { if (e.key === 'Enter') talkToAI(); });
+    </script>
+</body>
+</html>
