@@ -15,7 +15,7 @@
     <meta property="og:description" content="Голос Сахалина. Уникальное сочетание искренней островной лирики и современного звучания.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://deffsakhalin.ru">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/6366f1/ffffff?text=DEFF+SAKHALIN">
+    <meta property="og:image" content="https://cdn-image.zvuk.com/pic?hash=9072f703-f6d4-4dd8-92dc-5a2f990df08f&id=214028231&size=1&type=artist">
 
     <!-- JSON-LD (Структурированные данные для Google/Yandex) -->
     <script type="application/ld+json">
@@ -105,7 +105,12 @@
             border: 5px solid rgba(99, 102, 241, 0.15);
             outline: 2px solid var(--accent);
             box-shadow: 0 0 40px var(--accent-glow);
-            transition: all 0.5s ease;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: #0f172a;
+        }
+        .hero-artist-img:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 0 60px var(--accent);
         }
 
         .gradient-text {
@@ -155,7 +160,7 @@
     <!-- NAVIGATION -->
     <nav class="fixed top-0 w-full px-6 py-4 flex justify-between items-center">
         <div class="flex items-center gap-2">
-            <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white">D</div>
+            <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center font-bold text-white shadow-lg">D</div>
             <span class="font-black tracking-tighter uppercase text-xl text-white">Sakhalin</span>
         </div>
         
@@ -165,23 +170,23 @@
             <a href="#platforms" class="hover:text-white transition-colors">Стриминги</a>
         </div>
 
-        <button onclick="toggleMenu()" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10">
-            <i class="fas fa-bars-staggered"></i>
+        <button onclick="toggleMenu()" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+            <i class="fas fa-bars-staggered text-gray-300"></i>
         </button>
     </nav>
 
     <!-- SIDE DRAWER -->
-    <div id="drawer" class="nav-drawer p-10">
-        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-xl text-gray-400">
+    <div id="drawer" class="nav-drawer p-10 shadow-2xl">
+        <button onclick="toggleMenu()" class="absolute top-6 right-6 text-xl text-gray-400 hover:text-white transition-colors">
             <i class="fas fa-times"></i>
         </button>
         <div class="flex flex-col gap-8 mt-12 text-white">
             <h3 class="text-[10px] uppercase font-bold text-indigo-500 tracking-widest">Меню</h3>
-            <a href="#" class="text-2xl font-bold hover:text-indigo-400">Клипы</a>
-            <a href="#" class="text-2xl font-bold hover:text-indigo-400">Галерея</a>
+            <a href="#" class="text-2xl font-bold hover:text-indigo-400 transition-colors">Клипы</a>
+            <a href="#" class="text-2xl font-bold hover:text-indigo-400 transition-colors">Галерея</a>
             <hr class="border-white/5">
-            <a href="https://music.yandex.ru/artist/25147127" target="_blank" class="text-xl font-bold"><i class="fab fa-yandex text-red-500 mr-2"></i> Яндекс</a>
-            <a href="https://m.vk.com/artist/deffsakhalin" target="_blank" class="text-xl font-bold"><i class="fab fa-vk text-blue-400 mr-2"></i> VK</a>
+            <a href="https://music.yandex.ru/artist/25147127" target="_blank" class="text-xl font-bold hover:translate-x-2 transition-transform"><i class="fab fa-yandex text-red-500 mr-2"></i> Яндекс</a>
+            <a href="https://m.vk.com/artist/deffsakhalin" target="_blank" class="text-xl font-bold hover:translate-x-2 transition-transform"><i class="fab fa-vk text-blue-400 mr-2"></i> VK</a>
         </div>
     </div>
 
@@ -190,10 +195,10 @@
         <!-- HERO SECTION -->
         <section class="grid lg:grid-cols-2 gap-10 items-start mb-40">
             <div class="order-2 lg:order-1 pt-10">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[10px] font-bold uppercase mb-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-[10px] font-bold uppercase mb-6 tracking-widest">
                     Official Artist Site 2026
                 </div>
-                <h1 class="text-7xl md:text-[90px] leading-[0.85] font-black uppercase mb-8 italic">
+                <h1 class="text-7xl md:text-[90px] leading-[0.85] font-black uppercase mb-8 italic tracking-tighter">
                     DEFF <br> <span class="text-indigo-500 font-black">SAKHALIN</span>
                 </h1>
                 <p class="text-lg text-gray-400 max-w-lg leading-relaxed mb-10 font-light">
@@ -201,21 +206,27 @@
                 </p>
                 
                 <div class="flex flex-wrap gap-4">
-                    <a href="#music" class="px-8 py-4 bg-indigo-600 rounded-2xl font-bold hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-500/30">
-                        Слушать релизы
+                    <a href="#music" class="px-8 py-4 bg-indigo-600 rounded-2xl font-bold hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-500/30 flex items-center gap-3">
+                        Слушать релизы <i class="fas fa-play text-[10px]"></i>
                     </a>
-                    <button class="px-6 py-4 bg-white/5 border border-white/10 rounded-2xl font-bold hover:bg-white/10 transition-all">
-                        Клипы
+                    <button class="px-6 py-4 bg-white/5 border border-white/10 rounded-2xl font-bold hover:bg-white/10 transition-all flex items-center gap-3">
+                        <i class="fas fa-film text-indigo-400"></i> Клипы
                     </button>
                 </div>
             </div>
 
             <div class="order-1 lg:order-2 flex justify-end">
                 <div class="hero-artist-profile float-anim">
-                    <img src="https://via.placeholder.com/600x600/0f172a/6366f1?text=DEFF+SAKHALIN" alt="deff sakhalin photo" class="hero-artist-img">
-                    <div class="absolute bottom-7 right-7 bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center border-4 border-[#020617] shadow-xl">
-                        <i class="fas fa-check"></i>
+                    <!-- Официальное фото артиста с CDN Zvuk -->
+                    <img src="https://cdn-image.zvuk.com/pic?hash=9072f703-f6d4-4dd8-92dc-5a2f990df08f&id=214028231&size=1&type=artist" 
+                         alt="deff sakhalin" 
+                         class="hero-artist-img"
+                         onerror="this.src='https://via.placeholder.com/600x600/0f172a/6366f1?text=DEFF+SAKHALIN'">
+                    
+                    <div class="absolute bottom-7 right-7 bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center border-4 border-[#020617] shadow-xl z-10">
+                        <i class="fas fa-check text-xs"></i>
                     </div>
+                    <div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] h-[115%] bg-indigo-600/10 blur-[90px] rounded-full"></div>
                 </div>
             </div>
         </section>
@@ -238,42 +249,42 @@
                 <p class="text-gray-500 text-[9px] tracking-[0.4em] uppercase font-bold">Listen everywhere</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 max-w-5xl mx-auto px-4">
-                <a href="https://m.vk.com/artist/deffsakhalin" target="_blank" class="btn-platform flex flex-col items-center gap-2">
-                    <i class="fab fa-vk text-blue-400 text-xl"></i>
-                    <span class="text-[8px] font-extrabold uppercase">VK Музыка</span>
+                <a href="https://m.vk.com/artist/deffsakhalin" target="_blank" class="btn-platform flex flex-col items-center gap-2 group">
+                    <i class="fab fa-vk text-blue-400 text-xl group-hover:scale-110 transition-transform"></i>
+                    <span class="text-[8px] font-extrabold uppercase text-gray-400">VK Музыка</span>
                 </a>
-                <a href="#" class="btn-platform flex flex-col items-center gap-2">
-                    <i class="fas fa-play-circle text-blue-500 text-xl"></i>
-                    <span class="text-[8px] font-extrabold uppercase">VK Видео</span>
+                <a href="#" class="btn-platform flex flex-col items-center gap-2 group">
+                    <i class="fas fa-play-circle text-blue-500 text-xl group-hover:scale-110 transition-transform"></i>
+                    <span class="text-[8px] font-extrabold uppercase text-gray-400">VK Видео</span>
                 </a>
-                <a href="https://music.yandex.ru/artist/25147127" target="_blank" class="btn-platform flex flex-col items-center gap-2">
-                    <i class="fab fa-yandex text-red-500 text-xl"></i>
-                    <span class="text-[8px] font-extrabold uppercase">Яндекс</span>
+                <a href="https://music.yandex.ru/artist/25147127" target="_blank" class="btn-platform flex flex-col items-center gap-2 group">
+                    <i class="fab fa-yandex text-red-500 text-xl group-hover:scale-110 transition-transform"></i>
+                    <span class="text-[8px] font-extrabold uppercase text-gray-400">Яндекс</span>
                 </a>
-                <a href="https://zvuk.com/artist/214028231" target="_blank" class="btn-platform flex flex-col items-center gap-2">
-                    <i class="fas fa-play text-green-500 text-xl"></i>
-                    <span class="text-[8px] font-extrabold uppercase">Звук</span>
+                <a href="https://zvuk.com/artist/214028231" target="_blank" class="btn-platform flex flex-col items-center gap-2 group">
+                    <i class="fas fa-play text-green-500 text-xl group-hover:scale-110 transition-transform"></i>
+                    <span class="text-[8px] font-extrabold uppercase text-gray-400">Звук</span>
                 </a>
-                <a href="https://open.spotify.com/artist/3kJPKvWmNrejqPlO153DO0" target="_blank" class="btn-platform flex flex-col items-center gap-2">
-                    <i class="fab fa-spotify text-green-400 text-xl"></i>
-                    <span class="text-[8px] font-extrabold uppercase">Spotify</span>
+                <a href="https://open.spotify.com/artist/3kJPKvWmNrejqPlO153DO0" target="_blank" class="btn-platform flex flex-col items-center gap-2 group">
+                    <i class="fab fa-spotify text-green-400 text-xl group-hover:scale-110 transition-transform"></i>
+                    <span class="text-[8px] font-extrabold uppercase text-gray-400">Spotify</span>
                 </a>
-                <a href="#" class="btn-platform flex flex-col items-center gap-2">
-                    <i class="fab fa-odnoklassniki text-orange-500 text-xl"></i>
-                    <span class="text-[8px] font-extrabold uppercase">ОК</span>
+                <a href="#" class="btn-platform flex flex-col items-center gap-2 group">
+                    <i class="fab fa-odnoklassniki text-orange-500 text-xl group-hover:scale-110 transition-transform"></i>
+                    <span class="text-[8px] font-extrabold uppercase text-gray-400">ОК</span>
                 </a>
-                <a href="#" class="btn-platform flex flex-col items-center gap-2">
-                    <i class="fas fa-mobile-alt text-red-600 text-xl"></i>
-                    <span class="text-[8px] font-extrabold uppercase">МТС</span>
+                <a href="#" class="btn-platform flex flex-col items-center gap-2 group">
+                    <i class="fas fa-mobile-alt text-red-600 text-xl group-hover:scale-110 transition-transform"></i>
+                    <span class="text-[8px] font-extrabold uppercase text-gray-400">МТС</span>
                 </a>
-                <a href="https://m.vk.com/artist/deffsakhalin" target="_blank" class="btn-platform flex flex-col items-center gap-2 border-indigo-500/30 bg-indigo-500/10 text-indigo-300">
-                    <i class="fas fa-id-card text-xl"></i>
+                <a href="https://m.vk.com/artist/deffsakhalin" target="_blank" class="btn-platform flex flex-col items-center gap-2 border-indigo-500/30 bg-indigo-500/10 text-indigo-300 group">
+                    <i class="fas fa-id-card text-xl group-hover:scale-110 transition-transform"></i>
                     <span class="text-[8px] font-extrabold uppercase">Карточка</span>
                 </a>
             </div>
         </section>
 
-        <!-- AI CHAT (Работоспособность AI) -->
+        <!-- AI CHAT -->
         <section id="ai" class="mb-40 max-w-4xl mx-auto">
             <div class="glass overflow-hidden flex flex-col h-[500px] border-indigo-500/20 shadow-2xl">
                 <div class="bg-white/5 p-6 border-b border-white/5 flex justify-between items-center">
@@ -282,7 +293,7 @@
                         <span class="font-bold text-[10px] uppercase tracking-widest text-gray-400">AI Sakhalin Manager</span>
                     </div>
                 </div>
-                <div id="aiOutput" class="flex-grow p-8 overflow-y-auto space-y-4 text-gray-300">
+                <div id="aiOutput" class="flex-grow p-8 overflow-y-auto space-y-4 text-gray-300 scroll-smooth">
                     <div class="flex justify-start">
                         <div class="bg-white/5 p-4 rounded-2xl border border-white/5 max-w-[85%] text-sm">
                             Привет! Я официальный AI-менеджер артиста DEFF SAKHALIN. Могу рассказать о концертах, релизах или помочь с организацией интервью. Что тебя интересует?
@@ -291,7 +302,7 @@
                 </div>
                 <div class="p-6 bg-black/20 border-t border-white/5 flex gap-4">
                     <input id="aiInput" type="text" placeholder="Задай вопрос менеджеру..." class="flex-grow bg-white/5 border border-white/10 rounded-2xl px-6 text-sm focus:outline-none focus:border-indigo-500 transition-all text-white">
-                    <button onclick="handleAISend()" class="w-14 h-14 bg-indigo-600 rounded-2xl flex items-center justify-center hover:bg-indigo-500 transition-all text-white">
+                    <button onclick="handleAISend()" class="w-14 h-14 bg-indigo-600 rounded-2xl flex items-center justify-center hover:bg-indigo-500 transition-all text-white shadow-lg shadow-indigo-600/20">
                         <i class="fas fa-paper-plane" id="aiIcon"></i>
                     </button>
                 </div>
@@ -323,8 +334,8 @@
 
             // Добавляем сообщение пользователя
             output.innerHTML += `
-                <div class="flex justify-end">
-                    <div class="bg-indigo-600/20 p-4 rounded-2xl border border-indigo-500/20 max-w-[85%] text-sm text-white">
+                <div class="flex justify-end animate-fade-in">
+                    <div class="bg-indigo-600/20 p-4 rounded-2xl border border-indigo-500/20 max-w-[85%] text-sm text-white shadow-inner">
                         ${text}
                     </div>
                 </div>
@@ -341,7 +352,7 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         contents: [{ parts: [{ text: text }] }],
-                        systemInstruction: { parts: [{ text: "Ты — официальный AI-менеджер музыкального артиста DEFF SAKHALIN с острова Сахалин. Твоя задача: вежливо отвечать фанатам, рассказывать о творчестве, напоминать, что новые треки выходят на всех площадках. Твой тон: современный, дружелюбный, но профессиональный." }] }
+                        systemInstruction: { parts: [{ text: "Ты — официальный AI-менеджер музыкального артиста DEFF SAKHALIN с острова Сахалин. Твоя задача: вежливо отвечать фанатам, рассказывать о творчестве, напоминать, что новые треки выходят на всех площадках. Твой тон: современный, дружелюбный, но профессиональный. Не используй markdown-разметку, пиши чистым текстом." }] }
                     })
                 });
 
@@ -349,7 +360,7 @@
                 const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text || "Извини, я временно не в сети. Попробуй позже!";
 
                 output.innerHTML += `
-                    <div class="flex justify-start">
+                    <div class="flex justify-start animate-fade-in">
                         <div class="bg-white/5 p-4 rounded-2xl border border-white/5 max-w-[85%] text-sm">
                             ${aiText}
                         </div>
@@ -363,7 +374,6 @@
             }
         }
 
-        // Отправка по Enter
         document.getElementById('aiInput').addEventListener('keypress', function (e) {
             if (e.key === 'Enter') handleAISend();
         });
