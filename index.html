@@ -336,8 +336,97 @@
         </p>
     </footer>
 
-    <script>
-        const apiKey = ""; // API ключ подставляется средой автоматически
+   <script>
+        const apiKey = "";
+
+        // ==========================================
+        // СЛУШАТЬ РЕЛИЗЫ (МЕНЮ И СПИСОК ПЕСЕН)
+        // ==========================================
+        // Массив данных для релизов. 
+        const myReleases = [
+            {
+                name: "Deff Sakhalin (Все треки)",
+                url: "https://band.link/deff/iframe?theme=dark&picture=1&player_enabled=1&header=1"
+            },
+            {
+                name: "Amazing Music",
+                url: "https://band.link/amazing_muzic/iframe?theme=dark&player_enabled=1&header=1&picture=1"
+            }
+        ];
+
+        function initTrackList() {
+            const container = document.getElementById('trackListContainer');
+            myReleases.forEach((track, index) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left px-4 py-3 rounded-xl hover:bg-white/10 transition-colors flex items-center justify-between group";
+                btn.onclick = () => selectTrack(index);
+                btn.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                            <i class="fas fa-music text-[10px]"></i>
+                        </div>
+                        <span class="text-sm font-semibold truncate max-w-[160px]">${track.name}</span>
+                    </div>
+                    <i class="fas fa-chevron-right text-[8px] opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                `;
+                container.appendChild(btn);
+            });
+        }
+
+        function toggleReleasesMenu() {
+            const menu = document.getElementById('releasesMenu');
+            const chevron = document.getElementById('chevronIcon');
+            const isActive = menu.classList.contains('active');
+            
+            if (isActive) {
+                menu.classList.remove('active');
+                setTimeout(() => menu.style.display = 'none', 300);
+                chevron.style.transform = 'rotate(0deg)';
+            } else {
+                menu.style.display = 'block';
+                setTimeout(() => menu.classList.add('active'), 10);
+                chevron.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        function selectTrack(index) {
+            const track = myReleases[index];
+            const frame = document.getElementById('playerFrame');
+            const loading = document.getElementById('playerLoading');
+            const trackNameDisplay = document.getElementById('activeTrackName');
+
+            toggleReleasesMenu();
+            document.getElementById('music').scrollIntoView({ behavior: 'smooth' });
+
+            loading.classList.remove('pointer-events-none');
+            loading.style.opacity = "1";
+            frame.style.opacity = "0.3";
+
+            frame.src = track.url;
+            trackNameDisplay.innerText = track.name;
+
+            frame.onload = () => {
+                loading.style.opacity = "0";
+                loading.classList.add('pointer-events-none');
+                frame.style.opacity = "1";
+            };
+        }
+
+        window.addEventListener('click', (e) => {
+            const menu = document.getElementById('releasesMenu');
+            const btn = e.target.closest('button');
+            if (!btn || !btn.innerText.includes('Слушать релизы')) {
+                if (menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                    setTimeout(() => menu.style.display = 'none', 300);
+                    document.getElementById('chevronIcon').style.transform = 'rotate(0deg)';
+                }
+            }
+        });
+
+        // ==========================================
+        // ОСТАЛЬНОЙ ФУНКЦИОНАЛ
+        // ==========================================
 
         function toggleMenu() {
             document.getElementById('drawer').classList.toggle('open');
