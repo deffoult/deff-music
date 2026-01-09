@@ -4,35 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO & Metadata (Оптимизация для ТИЦ/ИКС) -->
+    <!-- SEO & Metadata -->
     <title>deff sakhalin — Official Artist Portal | Музыка Сахалина 2026</title>
     <meta name="description" content="Официальный сайт артиста deff sakhalin. Уникальный звук с острова Сахалин. Слушать новые треки, смотреть клипы, AI-ассистент менеджера. Весь каталог музыки 2026.">
     <meta name="keywords" content="deff sakhalin, дефф сахалин, музыка сахалина, сахалинский рэп, островная музыка, слушать deff sakhalin">
     <meta name="author" content="deff sakhalin">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 days">
     
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://deffsakhalin.ru">
+    
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="deff sakhalin News Feed" href="/rss.xml">
+
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn-image.zvuk.com/pic?hash=9072f703-f6d4-4dd8-92dc-5a2f990df08f&id=214028231&size=small">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn-image.zvuk.com/pic?hash=9072f703-f6d4-4dd8-92dc-5a2f990df08f&id=214028231&size=large">
+
     <!-- Open Graph (Социальное SEO) -->
     <meta property="og:title" content="deff sakhalin — Official Artist Portal">
     <meta property="og:description" content="Голос Сахалина. Уникальное сочетание искренней островной лирики и современного звучания.">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="music.playlist">
     <meta property="og:url" content="https://deffsakhalin.ru">
-    <meta property="og:image" content="https://cdn-image.zvuk.com/pic?hash=9072f703-f6d4-4dd8-92dc-5a2f990df08f&id=214028231&size=small&type=artist">
+    <meta property="og:image" content="https://cdn-image.zvuk.com/pic?hash=9072f703-f6d4-4dd8-92dc-5a2f990df08f&id=214028231&size=large&type=artist">
+    
+    <!-- КРИТИЧЕСКИ ВАЖНО: СВЯЗКА СО СТРИМИНГОМ -->
+    <meta property="music:musician" content="https://music.yandex.ru/artist/25147127">
+    <meta property="music:genre" content="Hip-Hop">
+    <meta property="music:genre" content="Indie">
 
-    <!-- JSON-LD (Структурированные данные для Google/Yandex) -->
+    <!-- JSON-LD (РАСШИРЕННЫЕ ДАННЫЕ ДЛЯ GOOGLE/YANDEX) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MusicGroup",
       "name": "deff sakhalin",
       "url": "https://deffsakhalin.ru",
-      "genre": "Hip-Hop / Indie",
-      "originPlace": "Sakhalin, Russia",
+      "genre": ["Hip-Hop", "Indie", "Island Pop"],
+      "originPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Sakhalin, Russia"
+      },
+      "description": "Официальный сайт артиста deff sakhalin. Голос острова Сахалин.",
+      "image": "https://cdn-image.zvuk.com/pic?hash=9072f703-f6d4-4dd8-92dc-5a2f990df08f&id=214028231&size=large",
       "sameAs": [
         "https://music.yandex.ru/artist/25147127",
-        "https://m.vk.com/artist/deffsakhalin"
+        "https://m.vk.com/artist/deffsakhalin",
+        "https://zvuk.com/artist/214028231",
+        "https://open.spotify.com/artist/3kJPKvWmNrejqPlO153DO0"
+      ],
+      "track": [
+        {
+          "@type": "MusicRecording",
+          "name": "Amazing Music",
+          "url": "https://music.yandex.ru/artist/25147127"
+        },
+        {
+          "@type": "MusicRecording",
+          "name": "Sakhalin Vibe",
+          "url": "https://music.yandex.ru/artist/25147127"
+        },
+        {
+          "@type": "MusicRecording",
+          "name": "Island Flow",
+          "url": "https://music.yandex.ru/artist/25147127"
+        }
       ]
     }
     </script>
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
