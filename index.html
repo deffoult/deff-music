@@ -464,6 +464,22 @@
     </footer>
 
    <script>
+       // ЛОГИКА СТРАНИЦЫ ОШИБКИ (РЕДИРЕКТ НА КОРНЕВОЙ ФАЙЛ)
+        // Если что-то идет не так, мы перенаправляем на внешний файл
+        function triggerErrorRedirect() {
+            window.location.href = '/error.html';
+        }
+
+        function toggleMenu() { document.getElementById('drawer').classList.toggle('open'); }
+
+        // ПРОВЕРКА НЕСУЩЕСТВУЮЩИХ РАЗДЕЛОВ (ХЭШЕЙ)
+        window.addEventListener('hashchange', () => {
+            const validHashes = ['#music', '#ai', ''];
+            if (!validHashes.includes(window.location.hash)) {
+                // Если хэш неверный — редирект на страницу ошибки
+                triggerErrorRedirect();
+            }
+        });
         const apiKey = "";
         const myReleases = [
             { name: "Deff Sakhalin (Все треки)", url: "https://band.link/deff/iframe?theme=dark&picture=1&player_enabled=1&header=1" },
@@ -557,7 +573,7 @@
                 const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text || "Я на связи!";
                 output.innerHTML += `<div class="flex justify-start"><div class="bg-white/5 p-5 rounded-2xl border border-white/5 text-sm text-gray-300">${aiText}</div></div>`;
                 output.scrollTop = output.scrollHeight;
-            } catch (e) { console.error(e); } finally { 
+            } catch (e) { triggerErrorRedirect();  } finally { 
                 icon.className = "fas fa-paper-plane"; 
             }
         }
