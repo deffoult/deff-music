@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Остров не найден | Deff Sakhalin</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --accent: #6366f1;
+            --accent-glow: rgba(99, 102, 241, 0.4);
+            --bg-deep: #020617;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: #f8fafc;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .aurora-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: 
+                radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.1) 0%, transparent 40%);
+            z-index: -1;
+            filter: blur(80px);
+        }
+
+        .glass {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 40px;
+        }
+
+        .glitch {
+            font-size: 120px;
+            font-weight: 900;
+            position: relative;
+            text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                        -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+                        0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+            animation: glitch 500ms infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75); }
+            14% { text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75); }
+            15% { text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75); }
+            49% { text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75); }
+            50% { text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75); }
+            99% { text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75); }
+            100% { text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em -0.05em 0 rgba(0, 0, 255, 0.75); }
+        }
+
+        .pulse-accent {
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(99, 102, 241, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="aurora-bg"></div>
+
+    <div class="max-w-2xl w-full mx-6 glass p-12 text-center relative overflow-hidden">
+        <!-- Декоративный элемент -->
+        <div class="absolute -top-24 -right-24 w-48 h-48 bg-indigo-600/20 rounded-full blur-3xl"></div>
+        
+        <div class="glitch italic tracking-tighter mb-4">404</div>
+        
+        <h1 class="text-2xl font-black uppercase tracking-widest mb-6">Остров не найден</h1>
+        
+        <p class="text-gray-400 font-light leading-relaxed mb-10">
+            Похоже, эта волна унесла страницу слишком далеко в океан. <br>
+            Вернись на главную, чтобы продолжить слушать <span class="text-indigo-400 font-bold tracking-tighter italic">DEFF SAKHALIN</span>.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="index.html" class="px-10 py-4 bg-indigo-600 rounded-2xl font-bold hover:bg-indigo-500 transition-all shadow-lg flex items-center justify-center gap-3 group pulse-accent">
+                <i class="fas fa-home group-hover:-translate-x-1 transition-transform"></i>
+                На главную
+            </a>
+            <button onclick="history.back()" class="px-10 py-4 bg-white/5 border border-white/10 rounded-2xl font-bold hover:bg-white/10 transition-all flex items-center justify-center gap-3">
+                Назад
+            </button>
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-white/5 flex justify-center gap-6 text-gray-500 text-sm">
+            <a href="https://zvuk.com/artist/214028231" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-vk"></i></a>
+            <a href="https://music.yandex.ru/artist/25147127" target="_blank" class="hover:text-white transition-colors"><i class="fas fa-music"></i></a>
+            <a href="https://www.youtube.com/channel/UCe_tot2aOFGZQfpn8PGNWDQ" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+</body>
+</html>
