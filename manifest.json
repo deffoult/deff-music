@@ -1,0 +1,21 @@
+{
+  "name": "deff sakhalin — Official Artist Portal",
+  "short_name": "deff sakhalin",
+  "description": "Официальный сайт артиста deff sakhalin. Музыка с острова Сахалин.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#6366f1",
+  "icons": [
+    {
+      "src": "https://cdn-image.zvuk.com/pic?hash=9072f703-f6d4-4dd8-92dc-5a2f990df08f&id=214028231&size=small&type=artist",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn-image.zvuk.com/pic?hash=9072f703-f6d4-4dd8-92dc-5a2f990df08f&id=214028231&size=large&type=artist",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
