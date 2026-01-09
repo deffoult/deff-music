@@ -500,6 +500,20 @@
             icon.style.transform = menu.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
         }
 
+         /* [ФУНКЦИОНАЛ КЛИПОВ: СКРИПТ УПРАВЛЕНИЯ] */
+        function toggleVideoArchive() {
+            // Находим целевую секцию архива
+            const section = document.getElementById('video-section');
+            
+            // Переключаем класс 'active' (запускает анимацию CSS max-height)
+            section.classList.toggle('active');
+            
+            // Если секция открылась, плавно скроллим пользователя к ней
+            if(section.classList.contains('active')) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
         function selectTrack(index) {
             const track = myReleases[index];
             const frame = document.getElementById('playerFrame');
